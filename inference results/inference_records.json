@@ -1,0 +1,162 @@
+[
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLFF0173_0682274084_191RAD_N0061450NCAM00604_0A00LLJ01.jpg",
+        "reconstruction_error": 0.045321375131607056
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLFS0015_0668287694_287RAD_N0030386NCAM02001_0M00LLJ01.jpg",
+        "reconstruction_error": 0.01371625903993845
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0002_0667130166_842RAD_N0010052AUT_04096_0A00LLJ03 — kopia.jpg",
+        "reconstruction_error": 0.035345982760190964
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0002_0667130334_929RAD_N0010052AUT_04096_0A00LLJ03.jpg",
+        "reconstruction_error": 0.04754497855901718
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0012_0668003010_164RAD_N0030000NCAM00300_0A00LLJ05.jpg",
+        "reconstruction_error": 0.02950444258749485
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0031_0669696043_450RAD_N0030834NCAM00601_0A00LLJ02 — kopia.jpg",
+        "reconstruction_error": 0.022732345387339592
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0033_0669877084_565RAD_N0031374NCAM03033_0A0295J02 — kopia.jpg",
+        "reconstruction_error": 0.016188032925128937
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0044_0670851838_793RAD_N0031416NCAM00602_0A00LLJ02.jpg",
+        "reconstruction_error": 0.03529248759150505
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0058_0672086944_648RAD_N0032046NCAM00603_0A00LLJ03.jpg",
+        "reconstruction_error": 0.004997079260647297
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0058_0672086960_508RAD_N0032046NCAM00603_0A00LLJ03.jpg",
+        "reconstruction_error": 0.006030471064150333
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0058_0672087022_790RAD_N0032046NCAM00603_0A00LLJ03.jpg",
+        "reconstruction_error": 0.023484347388148308
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0058_0672087122_169RAD_N0032046NCAM00603_0A00LLJ03.jpg",
+        "reconstruction_error": 0.022440727800130844
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0061_0672355917_742RAD_N0032046NCAM00297_0A00LLJ02.jpg",
+        "reconstruction_error": 0.020163998007774353
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0065_0672707826_737RAD_N0032046NCAM00410_0A00LLJ02.jpg",
+        "reconstruction_error": 0.019521422684192657
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0073_0673426662_691RAD_N0032394NCAM00301_0A0295J02.jpg",
+        "reconstruction_error": 0.01644638180732727
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0077_0673774216_538RAD_N0032430NCAM00501_0A0295J02 — kopia.jpg",
+        "reconstruction_error": 0.010412865318357944
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0111_0676793471_427RAD_N0040922NCAM03111_0A00LLJ02.jpg",
+        "reconstruction_error": 0.01659892126917839
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0210_0685593754_289RAD_N0072050NCAM03210_0A0195J02.jpg",
+        "reconstruction_error": 0.03006122075021267
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0210_0685597028_551RAD_N0072050NCAM00501_0A0295J02.jpg",
+        "reconstruction_error": 0.009352040477097034
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0246_0688781228_976RAD_N0072440NCAM00501_0A0295J01.jpg",
+        "reconstruction_error": 0.00728614954277873
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0294_0693053079_112RAD_N0090000NCAM00514_0A0295J01.jpg",
+        "reconstruction_error": 0.008239030838012695
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0303_0693824038_895RAD_N0090000NCAM00516_0A0295J01.jpg",
+        "reconstruction_error": 0.009539803490042686
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_0341_0697217863_730RAD_N0092304NCAM00367_0A0295J01.jpg",
+        "reconstruction_error": 0.010643131099641323
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_1215_0774814981_145RAD_N0560000NCAM00709_0A0095J01.jpg",
+        "reconstruction_error": 0.040517427027225494
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLF_1594_0808448817_972RAD_N0780922NCAM00501_0A0295J01.jpg",
+        "reconstruction_error": 0.004899108782410622
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLG_1143_0768423116_191RAD_N0521700SCAM07143_0A01LLJ01.jpg",
+        "reconstruction_error": 0.03759201243519783
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLG_1349_0786710760_175RAD_N0633564NCAM00518_0A02I3J01.jpg",
+        "reconstruction_error": 0.006083679385483265
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLM_0927_0749233564_757RAD_N0450805VCE_15900_0A02LLJ01.jpg",
+        "reconstruction_error": 0.014709064736962318
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLM_0993_0755095659_600RAD_N0470163VCE_15900_0A02LLJ01.jpg",
+        "reconstruction_error": 0.017821956425905228
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLM_0994_0755183027_776RAD_N0471423VCE_16000_0A02LLJ01.jpg",
+        "reconstruction_error": 0.015473870560526848
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLM_1182_0771874303_731RAD_N0540654VCE_15900_0A02LLJ01.jpg",
+        "reconstruction_error": 0.030557947233319283
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLM_1182_0771874423_867RAD_N0540673VCE_16000_0A02LLJ01.jpg",
+        "reconstruction_error": 0.03126665949821472
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLM_1219_0775161448_945RAD_N0560367VCE_16000_0A02LLJ01.jpg",
+        "reconstruction_error": 0.03246825933456421
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLM_1220_0775246449_927RAD_N0560975VCE_15940_0A02LLJ01.jpg",
+        "reconstruction_error": 0.03602027893066406
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLM_1359_0787577990_368RAD_N0640875VCE_15900_0A02LLJ02.jpg",
+        "reconstruction_error": 0.016888072714209557
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLM_1367_0788277331_661RAD_N0642278NCAM00265_0A02LLJ01.jpg",
+        "reconstruction_error": 0.01597973145544529
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLM_1540_0803649422_553RAD_N0750277VCE_15900_0A02LLJ01.jpg",
+        "reconstruction_error": 0.01753002405166626
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLM_1577_0806943510_667RAD_N0774169VCE_16000_0A02LLJ01.jpg",
+        "reconstruction_error": 0.018897373229265213
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLM_1601_0809071689_115RAD_N0784447VCE_16000_0A02LLJ01.jpg",
+        "reconstruction_error": 0.012206703424453735
+    },
+    {
+        "file_path": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\data\\NLM_1606_0809513709_618RAD_N0784773VCE_16000_0A02LLJ01.jpg",
+        "reconstruction_error": 0.018019363284111023
+    }
+]

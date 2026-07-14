@@ -1,0 +1,10 @@
+{
+    "num_images": 40,
+    "mean_error": 0.02069487568223849,
+    "std_error": 0.011425518087264672,
+    "min_error": 0.004899108782410622,
+    "max_error": 0.04754497855901718,
+    "total_inference_time_per_image_sec": 0.07731353044509888,
+    "images_per_second": 12.9343466045715,
+    "avg_batch_time_sec": 1.2706280946731567
+}

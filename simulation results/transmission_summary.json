@@ -1,0 +1,77 @@
+{
+    "inference_metrics": {
+        "num_images": 40,
+        "mean_error": 0.02069487568223849,
+        "std_error": 0.011425518087264672,
+        "min_error": 0.004899108782410622,
+        "max_error": 0.04754497855901718,
+        "total_inference_time_per_image_sec": 0.07731353044509888,
+        "images_per_second": 12.9343466045715,
+        "avg_batch_time_sec": 1.2706280946731567
+    },
+    "transmission_scenarios": [
+        {
+            "scenario_name": "10pct",
+            "total_images": 40,
+            "selected_images": 4,
+            "discarded_images": 36,
+            "transmission_percent": 10.0,
+            "reduction_percent": 90.0,
+            "total_inference_time_per_image": 0.07731353044509888,
+            "inference_per_second": 12.9343466045715,
+            "avg_batch_time_sec": 1.2706280946731567,
+            "selected_score_mean": 0.0427439482882615,
+            "selected_score_min": 0.037592012435197004,
+            "selected_score_max": 0.047544978559017,
+            "output_csv": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\simulation results\\scenario_10pct.csv",
+            "selected_images_dir": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\simulation results\\selected_10pct",
+            "copy_stats": {
+                "copied_files": 4,
+                "missing_source_files": 0,
+                "renamed_due_to_name_conflict": 0
+            }
+        },
+        {
+            "scenario_name": "5pct",
+            "total_images": 40,
+            "selected_images": 2,
+            "discarded_images": 38,
+            "transmission_percent": 5.0,
+            "reduction_percent": 95.0,
+            "total_inference_time_per_image": 0.07731353044509888,
+            "inference_per_second": 12.9343466045715,
+            "avg_batch_time_sec": 1.2706280946731567,
+            "selected_score_mean": 0.046433176845312,
+            "selected_score_min": 0.045321375131607,
+            "selected_score_max": 0.047544978559017,
+            "output_csv": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\simulation results\\scenario_5pct.csv",
+            "selected_images_dir": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\simulation results\\selected_5pct",
+            "copy_stats": {
+                "copied_files": 2,
+                "missing_source_files": 0,
+                "renamed_due_to_name_conflict": 0
+            }
+        },
+        {
+            "scenario_name": "1pct",
+            "total_images": 40,
+            "selected_images": 1,
+            "discarded_images": 39,
+            "transmission_percent": 1.0,
+            "reduction_percent": 99.0,
+            "total_inference_time_per_image": 0.07731353044509888,
+            "inference_per_second": 12.9343466045715,
+            "avg_batch_time_sec": 1.2706280946731567,
+            "selected_score_mean": 0.047544978559017,
+            "selected_score_min": 0.047544978559017,
+            "selected_score_max": 0.047544978559017,
+            "output_csv": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\simulation results\\scenario_1pct.csv",
+            "selected_images_dir": "C:\\Users\\patry\\Desktop\\EdgeAi\\git\\simulation results\\selected_1pct",
+            "copy_stats": {
+                "copied_files": 1,
+                "missing_source_files": 0,
+                "renamed_due_to_name_conflict": 0
+            }
+        }
+    ]
+}

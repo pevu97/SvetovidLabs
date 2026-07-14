@@ -1,0 +1,5 @@
+file_path,reconstruction_error,rank,transmission_percent,selected_for_transmission
+C:\Users\patry\Desktop\EdgeAi\git\data\NLF_0002_0667130334_929RAD_N0010052AUT_04096_0A00LLJ03.jpg,0.047544978559017,1,10,True
+C:\Users\patry\Desktop\EdgeAi\git\data\NLFF0173_0682274084_191RAD_N0061450NCAM00604_0A00LLJ01.jpg,0.045321375131607,2,10,True
+C:\Users\patry\Desktop\EdgeAi\git\data\NLF_1215_0774814981_145RAD_N0560000NCAM00709_0A0095J01.jpg,0.040517427027225,3,10,True
+C:\Users\patry\Desktop\EdgeAi\git\data\NLG_1143_0768423116_191RAD_N0521700SCAM07143_0A01LLJ01.jpg,0.037592012435197004,4,10,True

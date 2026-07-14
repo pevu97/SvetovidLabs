@@ -1,0 +1,10 @@
+.git
+__pycache__
+mlruns
+mlartifacts
+report
+simulation results
+simulation_demo_2k
+inference results
+tests
+.pytest_cache

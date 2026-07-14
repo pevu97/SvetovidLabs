@@ -1,5 +1,7 @@
 # 🚀 Svetovid Labs - Edge AI for Onboard Data Prioritization (Anomaly Detection)
 
+**🌐 Project website: [svetovid.dev](https://svetovid.dev/)**
+
 This project presents a proof-of-concept Edge AI system designed for **onboard data prioritization and selective transmission** in bandwidth-constrained environments, such as planetary missions.
 
 The system simulates how spacecraft (or other edge devices) can automatically select and transmit only the most valuable data using anomaly detection.
@@ -29,7 +31,12 @@ This project implements an **onboard AI pipeline** that:
 
 ---
 
-## 📊 Results shown below are generated on a 2k-image subset for demonstration purposes.
+## 📊 Results
+
+The figures below come from the full experiment (~50k images). The repository
+includes only a small sample dataset — running the demo pipeline on it will
+produce different numbers (see Quick Start).
+
 ### Reconstruction Error Distribution
 
 ![Histogram](simulation_demo_2k/error_histogram.png)
@@ -51,9 +58,11 @@ High-error samples correspond to visually distinct or rare scenes
 
 ### Key Metrics
 
-- Inference throughput: ~11 images/sec  
-- Avg latency: ~0.088 s/image  
+- Inference throughput: ~11 images/sec
+- Avg latency: ~0.088 s/image
 - Data reduction: up to 99%
+
+---
 
 ## ⚙️ Pipeline Overview
 
@@ -73,84 +82,28 @@ generate_report.py        # build visual reports
 
 * Autoencoder-based anomaly detection
 * Image prioritization using reconstruction error
-* Simulation of transmission scenarios:
-
-  * 10%
-  * 5%
-  * 1%
+* Simulation of transmission scenarios (10% / 5% / 1%)
 * Performance metrics (inference time, throughput)
 * Visual reports and plots
-
----
-
-## 🧪 Demo Dataset
-
-The model was developed and evaluated using images from NASA's Perseverance rover (Mars 2020 mission), specifically NAVCAM (Navigation Camera) data.
-
-### Dataset Characteristics
-
-- Source: NASA PDS Imaging Atlas  
-- Camera: NAVCAM (left/right)  
-- Image type: mostly grayscale navigation images  
-- Resolution: typically ~1024×1024 (resized to 256×256 for training)  
-- Dataset size: ~50,000 images (filtered and deduplicated)  
-
-### Preprocessing
-
-- near-duplicate removal (perceptual hashing)  
-- grayscale normalization  
-- filtering of unusable frames (e.g., rover-dominant or ground-only images)  
-
-### Demo Data
-
-The repository includes a small sample dataset for demonstration purposes.
-
-Full experiments were conducted on a significantly larger dataset (~50k images), which is not included due to size constraints.
-
-### ⚠️ Reproducing Full-Scale Experiments
-
-To replicate results at full scale or extend the dataset, users must download additional NAVCAM images directly from the official NASA dataset.
-
-
-Due to bandwidth and storage limitations, the repository does not host the full dataset.
+* MLflow experiment tracking
+* Unit test suite and Docker support
 
 ---
 
 ## ▶️ Quick Start
 
-### 1. Clone repository
+### 1. Clone and install
 
 ```
 git clone https://github.com/pevu97/SvetovidLabs.git
 cd SvetovidLabs
-```
-
----
-
-### 2. Install dependencies
-
-```
 pip install -r requirements.txt
 ```
 
----
+### 2. Run the demo pipeline
 
-### 3. ⚠️ IMPORTANT – Clean previous results
-
-Before running the pipeline, **you must clear the contents of the folder**:
-
-```
-simulation/results/
-```
-
-Otherwise:
-
-* results will be duplicated
-* reports may become inconsistent
-
----
-
-### 4. Run full pipeline
+The repository ships with a trained model (`best_autoencoder.pth`) and a small
+sample dataset, so you can run the full pipeline immediately:
 
 ```
 python run_inference.py
@@ -158,50 +111,75 @@ python simulate_transmission.py
 python generate_report.py
 ```
 
+Each step feeds the next: `run_inference.py` scores every image in `data/`,
+`simulate_transmission.py` ranks them and simulates 10/5/1% transmission, and
+`generate_report.py` builds the plots and tables.
+
+> **Note:** the sample set contains ~30 images, so the numbers you get will
+> differ from the figures shown above, which come from the full ~50k-image
+> experiment. The demo verifies that the pipeline runs end-to-end — it is not
+> meant to reproduce the published metrics.
+
+### 3. (Optional) Train from scratch
+
+```
+python train.py --data-dir data --epochs 40
+mlflow ui --backend-store-uri sqlite:///mlflow.db
+```
+
 ---
 
 ## 📈 Output
 
-After execution:
+After running the pipeline:
 
-### `inference results/`
+**`inference results/`** — inference_records.json, inference_summary.json
 
-* inference_records.json
-* inference_summary.json
+**`simulation results/`** — scenario_10pct.csv, scenario_5pct.csv, scenario_1pct.csv, selected image folders, transmission_summary.json
 
-### `simulation results/`
-* scenario_10pct.csv
-* scenario_5pct.csv
-* scenario_1pct.csv
-* selected image folders
-* transmission_summary.json
+**`report/`** — histograms, comparison tables, selected/rejected image visualizations
 
-### `report/`
-
-* histograms
-* comparison tables
-* selected image visualizations
-* rejected image examples
+> Re-running the pipeline overwrites the CSV and JSON outputs, but the
+> `selected_*pct/` image folders accumulate copies. Delete `simulation results/`
+> between runs if you want a clean slate.
 
 ---
 
-## ⚡ Performance
+## 🧪 Tests
 
-Example results:
+```
+pip install -r requirements-dev.txt
+pytest
+```
 
-* ~11 images/sec inference throughput
-* ~0.088 s per image
-* up to **99% data reduction**
+Unit tests cover the model contract (shapes, output range, latent compression,
+checkpoint round-trip), the reconstruction-error metric, and dataset loading.
 
 ---
 
-## 🛰️ Use Cases
+## 🔬 Experiment Tracking
 
-* Planetary missions (Mars rovers, orbiters)
-* Autonomous satellites
-* Remote sensing systems
-* Edge AI systems
-* Drone-based exploration
+Every training run logs to MLflow (local SQLite backend, `mlflow.db`):
+
+* full training configuration (lr, weight decay, scheduler, augmentation, split, seed),
+* train/val L1 loss and learning rate per epoch,
+* anomaly threshold (val mean + 3*std) and held-out test error statistics,
+* best checkpoint, loss curve and thresholds.json as artifacts.
+
+Inspect runs with:
+
+```
+mlflow ui --backend-store-uri sqlite:///mlflow.db
+```
+
+---
+
+## 🐳 Docker
+
+```
+docker build -t svetovid .
+docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/"inference results":/app/"inference results" svetovid
+```
 
 ---
 
@@ -230,54 +208,43 @@ in the corner of the frame.
 
 ---
 
-## 🚀 Quick Start
+## 🧪 Dataset
 
-```bash
-pip install -r requirements.txt
+The model was developed and evaluated using images from NASA's Perseverance rover
+(Mars 2020 mission), specifically NAVCAM (Navigation Camera) data.
 
-# 1. Train (tracked with MLflow: params, per-epoch losses, loss curve, checkpoint)
-python train.py --data-dir data --epochs 40
+**Characteristics**
 
-# 2. Inspect experiments
-mlflow ui --backend-store-uri sqlite:///mlflow.db
+- Source: NASA PDS Imaging Atlas
+- Camera: NAVCAM (left/right)
+- Image type: mostly grayscale navigation images
+- Resolution: typically ~1024×1024 (resized to 256×256 for training)
+- Dataset size: ~50,000 images (filtered and deduplicated)
 
-# 3. Score images and simulate transmission
-python run_inference.py
-python simulate_transmission.py
-python generate_report.py
-```
+**Reproducing full-scale experiments**
 
----
-
-## 🧪 Tests
-
-```bash
-pip install -r requirements-dev.txt
-pytest
-```
-
-Unit tests cover the model contract (shapes, output range, latent compression,
-checkpoint round-trip), the reconstruction-error metric, and dataset loading.
+The repository ships only a small sample dataset. To replicate results at full
+scale or extend the dataset, download additional NAVCAM images directly from the
+official NASA PDS Imaging Atlas — the full dataset is not hosted here due to size
+constraints.
 
 ---
 
-## 🐳 Docker
+## ⚡ Performance
 
-```bash
-docker build -t svetovid .
-docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/"inference results":/app/"inference results" svetovid
-```
+* ~11 images/sec inference throughput
+* ~0.088 s per image
+* up to **99% data reduction**
 
 ---
 
-## 🔬 Experiment Tracking
+## 🛰️ Use Cases
 
-Every training run logs to MLflow:
-
-* full training configuration (lr, weight decay, scheduler, augmentation, split, seed),
-* train/val L1 loss and learning rate per epoch,
-* anomaly threshold (val mean + 3*std) and held-out test error statistics,
-* best checkpoint, loss curve and thresholds.json as artifacts.
+* Planetary missions (Mars rovers, orbiters)
+* Autonomous satellites
+* Remote sensing systems
+* Edge AI systems
+* Drone-based exploration
 
 ---
 
@@ -293,8 +260,9 @@ Every training run logs to MLflow:
 
 ## 📬 Contact
 
-Author: **[Patryk Wieczorek]**
-GitHub: https://github.com/pevu97
+Author: **Patryk Wieczorek**
+Website: [svetovid.dev](https://svetovid.dev/)
+GitHub: [github.com/pevu97](https://github.com/pevu97)
 
 ---
 
